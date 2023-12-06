@@ -1,0 +1,165 @@
+/*  */
+
+table
+{
+    table-layout: fixed;
+    column-count: 4;
+    width: 100%;
+    border-collapse: collapse;
+    border: 3px solid purple;
+    color: black;
+    background-color: white;
+    padding-top: 20px;
+}
+
+th, td
+{
+    padding: 5px;
+    border: 3px solid rgb(0, 0, 0);
+}
+
+tr > td
+{
+    text-align: center;
+}
+
+tr > td:nth-child(2), tr >th:nth-child(2)
+{text-align: left;}
+
+.num-col
+{
+    width: 20%;
+}
+
+.name-col
+{
+    width: 30%;
+}
+
+tbody > tr:nth-child(odd) 
+{
+    background-color: #b8b8b8;
+    color: black;
+}
+  
+tbody > tr:nth-child(even) 
+{
+    background-color: rgb(98, 98, 98);
+}
+
+/* Main divs (title, adding and invoice) */
+
+.main-div 
+{
+    align-items: center;
+    background-color: #f2f2f2;
+    border: 10px inset #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#div-title
+{
+    background-color: #00ff91;
+    padding: 5px;
+}
+
+#div-add
+{
+    background-color: #FF8C00
+}
+
+#div-item-quantity
+{
+    display: flex;
+}
+
+.column
+{
+    flex: 50%;
+    align-items: center;
+    background-color: #2196f3;
+    border-radius: 30px;
+    box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
+
+#div-invoice
+{
+    background-color: rgb(255, 0, 72);
+}
+
+#div-item
+{
+    padding-bottom: 50px;
+}
+
+/* Buttons */
+
+
+.btn
+{
+    padding: 10px;
+    background-color: #2196f3;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.change-quantity
+{
+    cursor: pointer;
+    user-select: none;
+}
+
+#quantity
+{
+    user-select: none;
+}
+
+#div-invoice-btns
+{
+    background-color: purple;
+    padding: 10px;
+    border-radius: 20px;
+    display: flexbox;
+}
+
+
+/* Typography */
+
+html 
+{
+    font-family: "Inter", Courier, monospace;
+    background-color: rgb(67, 14, 67);
+    padding: 20px;
+}
+
+h1, 
+h2,
+h3
+{
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    text-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+h2
+{
+    font-size: 1.5rem;
+}

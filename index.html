@@ -1,0 +1,104 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Price Calculator</title>
+        <link rel="stylesheet" href="style.css">
+
+        <!-- Cool fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Rock+Salt" rel="stylesheet" type="text/css" />
+
+        <!-- JQuery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+        <!-- Select2 -->
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+        <!-- Save the table as pdf -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>  
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.6/jspdf.plugin.autotable.min.js"></script>  
+    </head>
+    <body>
+        
+        <header>
+
+            <div id="div-title" class="main-div" style="color: white;">
+                <h1>Price Calculator</h1>
+            </div>
+
+        </header>
+
+        <main>
+
+            <div id="div-add" class="main-div">
+
+                <div id="div-item-quantity">
+
+                    <div id="div-item" class="inner-div column">
+                        <h2>Item</h2>
+                        <select id="dropdown" class="js-example-basic-single" name="state">
+                          </select>
+                    </div>
+    
+                    <div class="inner-div column">
+                        <h2>Quantity</h2>
+                        <h3>
+                            <span id="decrement" class="change-quantity">-</span>
+                            <span id="quantity">1</span>
+                            <span id="increment" class="change-quantity">+</span>
+                        </h3>
+                    </div>
+
+                </div>
+
+                <div>
+                    <button id="btn-add" class="btn">Add to invoice</button>
+                </div>
+            
+            </div>
+
+
+        </main>
+
+        <footer>
+
+            <div id="div-invoice" class="main-div"> 
+
+                <span><h2>Invoice</h2></span>
+
+                <div id="div-invoice-btns">
+                    
+                    <button id="btn-undo" class="btn">Undo</button>
+                    <button id="btn-clear" class="btn">Clear</button>
+                    <button id="btn-save" class="btn">Save</button>
+                </div>
+
+                <br>
+
+                <table id="table">
+                    <thead>
+                        <tr>
+                            <th class="-col">Quantity</th>
+                            <th class="name-col">Product</th>
+                            <th class="num-col">Unit price</th>
+                            <th class="num-col">Sub-total</th>
+                        </tr>
+                    </thead>
+                    <tbody id="body"></tbody>
+                    <tfoot id="foot">
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td>Total : </td>
+                            <td id="total-cell"></td>
+                        </tr>
+                    </tfoot>
+                </table>
+
+            </div>
+
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
+</html>

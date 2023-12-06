@@ -1,0 +1,44 @@
+"Lemon creams (200g)": 18
+"Nutty krust (200g)": 20,
+"Strawberry whirls (200g)": 20,
+"Ginger nut (200g)": 20
+"Choc ginger (200g)": 20
+"Choc digestives (200g)": 20
+"Chockits (200g)": 20,
+"Jolly jammers (choc or jam) (200g)": 2
+"Zoo (200g)": 20
+"Good morning biscuits (chocolate) (200g)": 20
+"Salticrax (limited stock) (200g)": 20
+"4X38g Oreos (choc or original)": 25
+"6X29.4g Oreo (original)": 25
+"200g Royal creams": 27
+"750g Bakers rusks (muesli or buttermilk)": 50
+"Jube Jubes (100g)": 12
+"Chappies (100g)": 12
+"Peanut brittle (100g)": 12
+"Jelly tots (100g)": 12
+"Cherry gums (100g)": 12
+"Red and black gums (100g)": 12
+"Jelly bears (100g)": 12
+"Choc nut (100g)": 12
+"Wine gums (100g)": 12
+"Sugar hearts (100g)": 12
+"Pink and White candy peanuts (100g)": 12
+"Blue and White candy peanuts (100g)": 12
+"Multicoloured candy peanuts (100g)": 12
+"Mint Imperials (100g)": 12
+"XXX mint (100g)": 12
+"Coke bottles (100g)": 12
+"Fireballs (100g)": 12
+"Black sweet balls (100g)": 12
+"Jelly stars (100g)": 12
+"Jelly beans (100g)": 15
+"Speckled eggs (100g)": 15
+"Astros (100g)": 15
+"Funny faces (100g)": 15
+"Apricots (100g)": 15
+"Amajoya butterscotch (100g)": 15
+"Amajoya buttermilk (100g)": 15
+"Wrapped nougat (100g)": 15
+"Ziffers - 5 rolls for R10 (100g)": 15
+  

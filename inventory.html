@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+        <title>Inventory manager</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="inventory_script.js"></script>
+
+        <!-- Cool fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Rock+Salt" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+    <header>
+
+        <div id="div-title" class="main-div" style="color: white;">
+            <h1>Inventory manager</h1>
+        </div>
+
+    </header>
+
+    <main>
+
+        <div id="div-add" class="main-div">
+
+            <input type="file" id="fileInput" onchange="handleFile()" />
+
+            <div id="div-item-quantity">
+
+                <table id="productTable">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody"></tbody>
+                </table>
+
+            </div>
+        
+        </div>
+
+        <div id="div-name-price" class="main-div">
+
+            <label for="selectedName">Name :</label>
+            <input type="text" id="selectedName" value=""></input><br>
+            <label for="selectedPrice">Selected Price:</label>
+            <input type="text" id="selectedPrice" value=""> </input>
+
+            <button id="add-btn" onclick="addProduct()">Add</button>
+            <button id="add-btn" onclick="updateProduct()">Update</button>
+            <button id="add-btn" onclick="deleteProduct()">Delete</button>
+
+        </div>
+
+    </main>
+
+</body>
