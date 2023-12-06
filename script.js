@@ -6,74 +6,30 @@ $(document).ready(function() {
         });
 });
 
-function load_into_dict(filepath)
+let price_dict = {};
+
+function handleFile()
 {
-    const dictionary = {}
+    const fileInput = document.getElementById('fileInput');
+    const file = fileInput.files[0];
 
-    // Split the fileContent into lines
-    const lines = filepath.trim().split('\n');
+    if (file) {
+        const reader = new FileReader();
 
-    // Process each line to extract key-value pairs
-    lines.forEach(line => {
-        const [key, value] = line.split(':');
-        if (key && value) {
-        dictionary[key.trim()] = value.trim();
-        console.log(key);
+        reader.onload = function (e) {
+            price_dict = JSON.parse(e.target.result);
+            console.log(price_dict);
+            price_dict.forEach(item => {
+                var option = document.createElement('option');
+                option.value = item.price;
+                option.text = item.name;
+                dropdown.appendChild(option);
+            });
+        };
+
+        reader.readAsText(file);
     }
-    });
-
-    return dictionary;
 }
-
-var price_dict = load_into_dict('Store\price_data.txt');
-console.log(Object.keys(price_dict));
-
-var price_dict =
-{
-    "Lemon creams (200g)": 18,
-    "Nutty krust (200g)": 20,
-    "Strawberry whirls (200g)": 20,
-    "Ginger nut (200g)": 20,
-    "Choc ginger (200g)": 20,
-    "Choc digestives (200g)": 20,
-    "Jolly jammers (choc or jam) (200g)": 20,
-    "Chockits (200g)": 20,
-    "Zoo (200g)": 20,
-    "Good morning biscuits (chocolate) (200g)": 20,
-    "Salticrax (limited stock) (200g)": 20,
-    "4X38g Oreos (choc or original)": 25,
-    "6X29.4g Oreo (original)": 25,
-    "200g Royal creams": 27,
-    "750g Bakers rusks (muesli or buttermilk)": 50,
-    "Jube Jubes (100g)": 12,
-    "Chappies (100g)": 12,
-    "Peanut brittle (100g)": 12,
-    "Jelly tots (100g)": 12,
-    "Cherry gums (100g)": 12,
-    "Red and black gums (100g)": 12,
-    "Jelly bears (100g)": 12,
-    "Choc nut (100g)": 12,
-    "Wine gums (100g)": 12,
-    "Sugar hearts (100g)": 12,
-    "Pink and White candy peanuts (100g)": 12,
-    "Blue and White candy peanuts (100g)": 12,
-    "Multicoloured candy peanuts (100g)": 12,
-    "Mint Imperials (100g)": 12,
-    "XXX mint (100g)": 12,
-    "Coke bottles (100g)": 12,
-    "Fireballs (100g)": 12,
-    "Black sweet balls (100g)": 12,
-    "Jelly stars (100g)": 12,
-    "Jelly beans (100g)": 15,
-    "Speckled eggs (100g)": 15,
-    "Astros (100g)": 15,
-    "Funny faces (100g)": 15,
-    "Apricots (100g)": 15,
-    "Amajoya butterscotch (100g)": 15,
-    "Amajoya buttermilk (100g)": 15,
-    "Wrapped nougat (100g)": 15,
-    "Ziffers - 5 rolls for R10 (100g)": 15
-};
 
 var dropdown = document.getElementById('dropdown');
 var quantity = document.getElementById('quantity');
@@ -93,14 +49,6 @@ var table_body = document.getElementById('body');
 var table_foot = document.getElementById('foot');
 
 var last_row = undefined;
-
-Object.keys(price_dict).forEach(function(key)
-{
-    var option = document.createElement('option');
-    option.value = key;
-    option.text = key;
-    dropdown.appendChild(option);
-});
 
 
 function display_line(quantity, item ,price)
@@ -143,9 +91,9 @@ function update_total()
 
 function add_to_invoice()
 {
-    var item = dropdown.value;
-    var price = price_dict[item];
-    display_line(quantity.textContent, item, price);
+    var name = dropdown.options[dropdown.selectedIndex].text;
+    var price = dropdown.value;
+    display_line(quantity.textContent, name, price);
     update_total();
 }
 btn_add_to_invoice.addEventListener('click', add_to_invoice);

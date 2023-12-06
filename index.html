@@ -30,6 +30,8 @@
 
         <main>
 
+            <input type="file" id="fileInput" onchange="handleFile()" />
+
             <div id="div-add" class="main-div">
 
                 <div id="div-item-quantity">
@@ -37,6 +39,7 @@
                     <div id="div-item" class="inner-div column">
                         <h2>Item</h2>
                         <select id="dropdown" class="js-example-basic-single" name="state">
+                            <option>Please select an item to add</option>
                           </select>
                     </div>
     
